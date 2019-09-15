@@ -5,34 +5,18 @@
 
     <tr *ngFor="let producto of lista">
 
-        <ng-container *ngIf="productoEditado!=producto">
-
-                <td>{{producto.id}}</td>
-                <td>{{producto.concepto}}</td>
-                <td>{{producto.importe}}</td>
-                <td><input type="button" value="borrar" (click)="borrar(producto)" /></td>
-                <td *ngIf="productoEditado!=producto"><input type="button" value="edicion rapida" (click)="editar(producto)" /></td>
-                <td><input type="button" value="detalle" (click)="detalle(producto)" /></td>
-                <td><input type="button" value="editar" (click)="editar2(producto)" /></td>
-        </ng-container>
-
-
-        <ng-container *ngIf="productoEditado==producto">
-
-                <td><input type="text" name="id" [(ngModel)]="producto.id"/></td>
-                <td><input type="text" name="concepto" [(ngModel)]="producto.concepto"/></td>
-                <td><input type="text" name="importe" [(ngModel)]="producto.importe"/></td>
-                <td><input type="button" value="borrar" (click)="borrar(producto)" /></td>
-                <td *ngIf="productoEditado==producto">
-                        <input type="button" value="salvar" (click)="salvar(producto);productoEditado=null" />
-                </td>
-        </ng-container>
-
+      <app-fila-producto
+       [producto]="producto" 
+       [productoEditado]="productoEditado"
+       (eventoBorrar)="borrarProductoEvento($event)"
+       (eventoDetalle)="detalleProductoEvento($event)"
+       (eventoEditar2)="editar2ProductoEvento($event)"
+       (eventoEditar)="editarProductoEvento($event)"
+       (eventoSalvar)="salvarProductoEvento($event)"
+       
+       ></app-fila-producto>
         
-      
-       
-
-       
+     </tr>
 
 </table>
 

@@ -9,6 +9,8 @@ import { FormularioProductosComponent } from './formulario-productos/formulario-
 import { DetalleProductosComponent } from './detalle-productos/detalle-productos.component';
 import { FormularioProductosEdicionComponent } from './formulario-productos-edicion/formulario-productos-edicion.component';
 import { ErrorComponent } from './error/error.component';
+import { IvaPipe } from './iva.pipe';
+import { FilaProductoComponent } from './fila-producto/fila-producto.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ErrorComponent } from './error/error.component';
     FormularioProductosComponent,
     DetalleProductosComponent,
     FormularioProductosEdicionComponent,
-    ErrorComponent
+    ErrorComponent,
+    IvaPipe,
+    FilaProductoComponent
   ],
   imports: [
     BrowserModule,

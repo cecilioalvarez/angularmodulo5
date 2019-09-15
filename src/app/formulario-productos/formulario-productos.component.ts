@@ -22,7 +22,7 @@ export class FormularioProductosComponent implements OnInit {
 
 
   insertar(producto: Producto) {
-
+  
     this.servicio.insertar(producto)
       .subscribe(() => {
 

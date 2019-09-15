@@ -23,7 +23,7 @@ app.get("/productos/filtro",function(req, res) {
 
 
 
-app.get("/productos/detalle/:id",function(req,res) {
+app.get("/productos/:id",function(req,res) {
 
 
   let listaFiltrada = lista.filter(function (elemento) {

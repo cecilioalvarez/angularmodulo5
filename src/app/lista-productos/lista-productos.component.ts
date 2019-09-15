@@ -98,4 +98,33 @@ export class ListaProductosComponent implements OnInit {
 
   }
 
+
+  borrarProductoEvento(producto:Producto) {
+
+   
+    this.borrar(producto);
+
+  }
+
+
+  detalleProductoEvento(producto:Producto) {
+
+    this.detalle(producto);
+
+  }
+
+  editar2ProductoEvento(producto:Producto) {
+
+    this.editar2(producto);
+  }
+
+  editarProductoEvento(producto:Producto) {
+
+    this.editar(producto);
+  }
+
+  salvarProductoEvento(producto:Producto) {
+
+    this.salvar(producto);
+  }
 }
